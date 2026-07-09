@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      field {
+        width: 200%;
+        max-width: 800px;
+        margin-bottom: 2rem;
+      }
+    </style>
+    <title>Inventario</title>
+</head>
+<body>
+    <form class="box">
+  <div class="field">
+    <label class="label">Código producto</label>
+    <div class="control">
+      <input class="input" type="number" id="codigo_producto" />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Nombre producto</label>
+    <div class="control">
+      <input class="input" type="text" id="nombre_producto" />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Cantidad</label>
+    <div class="control">
+      <input class="input" type="number" id="cantidad" />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Marca producto</label>
+    <div class="control">
+      <input class="input" type="text" id="marca_producto" />
+    </div>
+  </div>
+
+  <button class="button is-primary">Enviar</button>
+   <button class="button is-primary">Cancelar</button>
+</form>
+<button 
+  type="button" 
+  class="button is-primary"
+  onclick="window.location.href='../index.html'">
+  Regresar
+</button>
+<script src="../js/inventario.js"></script>
+</body>
+</html>
