@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Contabilidad</title>
   </head>
   <body>
@@ -19,7 +20,7 @@
             src="https://cdn-icons-png.flaticon.com/128/10233/10233997.png"
           />
         </figure>
-        <form class="box">
+     
           <div class="field">
             <label class="label">Ventas</label>
             <div class="control">
@@ -62,16 +63,19 @@
             </div>
           </div>
 
-          <button class="button is-danger is-light" id="Guardar">Guardar</button>
-        </form>
+          <button type="submit" class="button is-danger is-light" id="Guardar">
+            Guardar
+          </button>
+      
       </div>
     </div>
     <button 
-  type="button" 
-  class="button is-primary"
-  onclick="window.location.href='../index.html'">
-  Regresar
-</button>
-<script src="../js/contabilidad.js"></script>
+      type="button" 
+      class="button is-primary"
+      onclick="window.location.href='../index.html'">
+      Regresar
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/contabilidad.js"></script>
   </body>
 </html>
