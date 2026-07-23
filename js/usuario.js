@@ -1,13 +1,14 @@
+
 function validarFormulario() {
-     let producto = document.getElementById("producto").value;
-     let nombre_usuario = document.getElementById("nombre_usuario").value;
-     let direccion = document.getElementById("direccion").value;
-     let cantidad = document.getElementById("cantidad").value;
-    let telefono = document.getElementById("telefono").value;
+     let nombre = document.getElementById("nombre").value;
+     let apellido = document.getElementById("apellido").value;
+     let numero_documento = document.getElementById("numero_documento").value;
+     let telefono = document.getElementById("telefono").value;
+    let correo = document.getElementById("correo").value;
 
 
   if (
-    producto === "" || nombre_usuario === "" || direccion === "" || cantidad === "" || telefono === ""
+    nombre === "" || apellido === "" || numero_documento === "" || telefono === "" || correo === ""
   ) {
     console.log("Los campos están vacíos");
     Swal.fire({
@@ -19,20 +20,8 @@ function validarFormulario() {
     });
     return;
   } else {
-    if (!/[0-9]/.test(producto)) {
-      console.log("Producto solo puede contener números");
-      Swal.fire({
-        position: "top-end",
-        icon: "error",
-        title: "Solo puede contener números",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      return;
-    }
-
-    if (!/^[a-zA-Z]+$/.test(nombre_usuario)) {
-      console.log("Nombre de usuario solo puede contener Letras");
+    if (!/^[a-zA-Z]+$/.test(nombre)) {
+      console.log("Nombre producto solo puede contener letras");
       Swal.fire({
         position: "top-end",
         icon: "error",
@@ -43,8 +32,20 @@ function validarFormulario() {
       return;
     }
 
-    if (!/[0-9]/.test(direccion)) {
-      console.log("Direccion solo puede contener números");
+    if (!/^[a-zA-Z]+$/.test(apellido)) {
+      console.log("Apellido solo puede contener Letras");
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Solo puede contener letras",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
+    }
+
+    if (!/[0-9]/.test(numero_documento)) {
+      console.log("Numero de documento solo puede contener números");
       Swal.fire({
         position: "top-end",
         icon: "error",
@@ -55,12 +56,12 @@ function validarFormulario() {
       return;
     }
 
-     if (!/[0-9]/.test(cantidad)) {
-      console.log("Cantidad solo puede contener números");
+     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+      console.log("Correo tiene que tener @");
       Swal.fire({
         position: "top-end",
         icon: "error",
-        title: "Solo puede contener números",
+        title: "Necesita un @",
         showConfirmButton: false,
         timer: 1500,
       });
